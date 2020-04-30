@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+
+  <title>Bausastra Jawa</title>
+  <meta name="description" content="Bausastra Jawa merupakan aplikasi kamus bahasa jawa lengkap dengan sumber yang jelas dan disertai Aksara Jawa" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#283593">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#283593">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#283593">
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="vendor/materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="vendor/materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="vendor/noto-sans-javanese/stylesheet.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<style>
+	html {
+		scroll-behavior: smooth;
+	}
+	.collection-item a{
+		color: black;
+	}
+	.collection-item:hover{
+		color: black;
+		background: #b3e5fc;
+	}
+	.text-jawa{
+		font-family: 'Noto Sans Javanese';
+	}
+	.meaning b .strong-match, .meaning .strong-match{
+		background: #283593;
+		color: #fff;
+	}
+	.meaning{
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical; 
+	}
+	.meaning>br{
+		display: none;
+	}
+	.meaning>b {
+		font-style: italic;
+		font-weight: normal;
+	}
+	/*.meaning{
+		overflow: hidden;
+		position: relative;
+		max-height: 4.6em; /* exactly three lines */
+	}
+	.meaning:after {
+	  content: "";
+	  text-align: right;
+	  position: absolute;
+	  bottom: 0;
+	  right: 0;
+	  width: 70%;
+	  height: 1.2em;
+	  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+	}*/
+
+	</style>
+	<script>
+	window.base_url = 'https://budiarto.id/bausastra/';
+	</script>
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+	<script type="text/javascript" charset="utf-8">
+    // Call onDeviceReady when PhoneGap is loaded.
+    //
+    // At this point, the document has loaded but phonegap-1.0.0.js has not.
+    // When PhoneGap is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    // 
+    document.addEventListener("deviceready", onDeviceReady, false);
+    // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+    //
+    function onDeviceReady() {
+        // Now safe to use the PhoneGap API
+		document.getElementById("app").style.display = "initial";
+    }
+    </script>
+</head>
+<body>
+
+	<div class="navbar-fixed">
+		<nav class="indigo darken-3" role="navigation">
+			<div class="nav-wrapper container">
+				<a id="logo-container" href="#" class="brand-logo">Bausastra</a>
+				<!--<ul class="right hide-on-med-and-down">
+					<li><a href="#">Navbar Link</a></li>
+				</ul>-->
+
+				<ul id="nav-mobile" class="sidenav">
+					<li><a href="#" class="indigo darken-3 white-text"><span class="text-jawa">ꦩꦼꦤꦸ</span> Menu</a></li>
+					<li><a href="//wa.me/6283840460580"><span class="text-jawa">ꦲꦸꦫꦸꦤ꧀ꦉꦩ꧀ꦧꦸꦒ꧀</span> Urun Rembug</a></li>
+					<li><a href="#!" class="share" onclick="share('Aplikasi Bausastra Jawa','Aplikasi Bausastra Jawa Online','https://bausastra.tera.pw')">Bagikan</a></li>
+				</ul>
+				<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			</div>
+		</nav>
+	</div>
+  
+  <div class="section no-pad-bot light-blue darken-3" id="index-banner">
+	<div class="container hide-on-small-only" style="padding-bottom:40px; padding-top:20px;">
+		<form id="frm1" action="javascript:search('frm1')">
+		<div class="white" style="height: 38px; display: flex;">
+			<input name="token" type="hidden" value="<?=$token?>"/>
+			<input name="search" type="text" placeholder="Cari di sini..." class="browser-default" style="font-size: 16px; background: transparent; border:0; padding: 10px 10px; width:80%">
+			<button class="deep-purple btn" style="margin:0; height:38px; width:20%; border-radius:0">Goleki</button>
+		</div>
+      </form>
+	</div>
+	<div class="container hide-on-med-and-up" style="padding-bottom:40px; padding-top:20px; width:90%">
+		<form id="frm2" action="javascript:search('frm2')">
+		<div class="white" style="height: 38px; display: flex;">
+			<input name="token" type="hidden" value="<?=$token?>"/>
+			<input name="search" type="text" placeholder="Cari di sini..." class="browser-default" style="font-size: 16px; background: transparent; border:0; padding: 10px 10px; width:80%">
+			<button class="deep-purple btn" style="margin:0; height:38px; width:20%; border-radius:0"><i class="material-icons">search</i></button>
+		</div>
+      </form>
+	</div>
+	<div style="height:20px"></div>
+</div>
+
+<div class="section light-blue lighten-5">
+	<div class="container white" style="margin-top: -50px; min-height: 360px; margin-bottom: -29px;">
+		<div id="initial" class="center" style="padding-top: 30px;">
+			<div class="text-jawa">
+				꧋ꦒꦺꦴꦭꦺꦏ꧀ꦏꦶꦠꦼꦩ꧀ꦧꦸꦁꦔꦁꦒꦺꦴꦧ꧀ꦭꦁꦏꦺꦴꦝꦸꦮꦸꦂꦏꦸꦮꦺꦪ꧈ꦭꦸꦂ꧉
+			</div>
+			Gunakan formulir di atas untuk mencari arti kata.
+		</div>
+		<ul id="result" class="collection" style="display: none;">
+		</ul>
+		<div id="err" class="center" style="padding-top: 10px; display: none;">
+			<h4>Mohon maaf.</h4>
+			<div id="err_msg"></div>
+		</div>
+		<div id="loading" class="center" style="padding: 30px; display: none;">
+			<div class="preloader-wrapper big active">
+				<div class="spinner-layer spinner-red">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+			</div><br/>
+			loading...
+		</div>
+	</div>
+</div>
+
+<div class="section light-blue lighten-5" style="padding-bottom:0;padding-top:0">
+	<div class="container white">
+		<div id="ads" class="center">
+			<a href="https://www.bukalapak.com/p/hobi-koleksi/buku/bahasa/fnkl56-jual-buku-iqra-hanacaraka-cara-mudah-belajar-aksara-jawa?keyword="><img src="https://budiarto.id/bausastra/assets/img/banner-iqra.png" style="width:auto; max-width:600px;max-height:80px;height:auto"/></a>
+		</div>
+	</div>
+</div>
+
+<div id="modal1" class="modal modal-fixed-footer">
+	<div class="modal-content">
+		<h4 class="text-jawa" id="detail-jawa">ꦲꦧ</h4>
+		<h4 id="detail-lema"></h4>
+		<p id="detail-arti"></p>
+		<hr/>
+		<strong>Sumber: </strong><span id="detail-pustaka"></span>
+	</div>
+	<div class="modal-footer">
+		<a href="#!" class="modal-close waves-effect waves-green btn" onclick="copyText()">Copy</a>
+		<a href="#!" class="modal-close waves-effect waves-green btn" onclick="shareText()">Share</a>
+		<a href="#!" class="modal-close waves-effect waves-green btn">Tutup</a>
+	</div>
+</div>
+
+<script>
+window.query = 'cindhe';
+</script>
+  
+	<div id="btn-scroll-top" class="fixed-action-btn" style="display:none">
+	  <button class="btn-floating btn-large deep-purple" onclick="scrollToTop()" data-toggle="tooltip"  data-position="top" data-tooltip="Kembali ke atas">
+		<i class="large material-icons">keyboard_arrow_up</i>
+	  </button>
+	</div>
+
+  <footer class="page-footer light-blue darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12 text-jawa">
+          <h5 class="white-text">ꦧꦲꦸꦱꦱ꧀ꦠꦿꦗꦮ</h5>
+          <p class="grey-text text-lighten-4" style="line-height:2;">꧋ꦲꦶ<wbr/>ꦱꦶ<wbr/>ꦤꦺ<wbr/>ꦲ<wbr/>ꦥ꧀ꦭꦶ<wbr/>ꦏ<wbr/>ꦱꦶ<wbr/>ꦧ<wbr/>ꦲꦸ<wbr/>ꦱ<wbr/>ꦱ꧀ꦠꦿ<wbr/>ꦲꦶ<wbr/>ꦏꦶ<wbr/>ꦢꦶ<wbr/>ꦗꦸ<wbr/>ꦥꦸ<wbr/>ꦏ꧀ꦱ<wbr/>ꦏ<wbr/>ꦥꦶ<wbr/>ꦫꦁ<wbr/>ꦥꦶ<wbr/>ꦫꦁ<wbr/>ꦧꦸ<wbr/>ꦏꦸ<wbr/>ꦱꦸ<wbr/>ꦥ<wbr/>ꦪ<wbr/>ꦭꦸ<wbr/>ꦮꦶꦃ<wbr/>ꦊꦁ<wbr/>ꦏ<wbr/>ꦥ꧀꧈<wbr/>ꦩꦼ<wbr/>ꦤ<wbr/>ꦮ<wbr/>ꦲ<wbr/>ꦤ<wbr/>ꦲꦸ<wbr/>ꦱꦸ<wbr/>ꦭ꧀<wbr/>ꦩꦁ<wbr/>ꦒ<wbr/>ꦏ<wbr/>ꦠꦸꦂ<wbr/>ꦫ<wbr/>ꦤ꧀ꦏꦺꦴ<wbr/>ꦤ꧀ꦠ<wbr/>ꦏ꧀ 083840460580</p>
+        </div>
+        <div class="col l6 s12">
+          <h5 class="white-text">Bausastra Jawa</h5>
+          <p class="grey-text text-lighten-4" style="line-height:2;">Bausastra Jawa Online ini merupakan sebuah aplikasi Kamus Bahasa Jawa lengkap yang diambil dari berbagai sumber dengan disertai Aksara Jawa. Sumber data arti kata yang ada di aplikasi ini tertera pada masing-masing entri sehingga lebih valid dan mudah dilacak pada sumber aslinya.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Oleh <a class="orange-text text-lighten-3" href="https://instagram.com/arifbudi.arto">Arif Budiarto</a>
+      </div>
+    </div>
+  </footer>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="vendor/materialize/js/materialize.min.js"></script>
+  <script src="vendor/materialize/js/init.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/bausastra.js"></script>
+
+    </body>
+</html>

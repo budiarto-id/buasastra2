@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'New Kramawirya';
+    src: url('NewKramawirya.eot');
+    src: url('NewKramawirya.eot?#iefix') format('embedded-opentype'),
+        url('NewKramawirya.woff2') format('woff2'),
+        url('NewKramawirya.woff') format('woff'),
+        url('NewKramawirya.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Noto Sans Javanese';
+    src: url('NotoSansJavanese-Regular.eot');
+    src: url('NotoSansJavanese-Regular.eot?#iefix') format('embedded-opentype'),
+        url('NotoSansJavanese-Regular.woff2') format('woff2'),
+        url('NotoSansJavanese-Regular.woff') format('woff'),
+        url('NotoSansJavanese-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

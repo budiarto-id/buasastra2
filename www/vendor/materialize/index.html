@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<link rel="manifest" href="./manifest.json">
+  <title>Bausastra Jawa</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<style>
+	.collection-item a{
+		color: black;
+	}
+	.collection-item:hover{
+		color: black;
+		background: #b3e5fc;
+	}
+	.text-jawa{
+		font-family: 'New Kramawirya';
+	}
+	</style>
+</head>
+<body>
+<div class="navbar-fixed">
+	<nav class="indigo darken-3" role="navigation">
+		<div class="nav-wrapper container">
+			<a id="logo-container" href="#" class="brand-logo">Bausastra</a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="#">Navbar Link</a></li>
+			</ul>
+
+			<ul id="nav-mobile" class="sidenav">
+				<li><a href="#">Navbar Link</a></li>
+			</ul>
+			<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+		</div>
+	</nav>
+</div>
+
+<div class="section no-pad-bot light-blue darken-3" id="index-banner">
+	<div class="container hide-on-small-only" style="padding-bottom:40px; padding-top:20px;">
+		<form>
+		<div class="white" style="height: 38px; display: flex;">
+			<input id="search" type="text" placeholder="goleki" class="browser-default" style="font-size: 16px; background: transparent; border:0;   padding: 10px 32px; width:80%">
+			<button class="deep-purple btn" style="margin:0; height:38px; width:20%; border-radius:0">Goleki</button>
+		</div>
+      </form>
+	</div>
+	<div class="container hide-on-med-and-up" style="padding-bottom:40px; padding-top:20px; width:90%">
+		<form>
+		<div class="white" style="height: 38px; display: flex;">
+			<input id="search" type="text" placeholder="goleki" class="browser-default" style="font-size: 16px; background: transparent; border:0;   padding: 10px 32px; width:80%">
+			<button class="deep-purple btn" style="margin:0; height:38px; width:20%; border-radius:0"><i class="material-icons">search</i></button>
+		</div>
+      </form>
+	</div>
+	<div style="height:20px"></div>
+</div>
+  
+<div class="section light-blue lighten-5">
+	<div class="container white" style="margin-top: -50px; min-height: 400px; margin-bottom: -29px;">
+		<ul class="collection">
+			<li class="collection-item avatar" style="padding-left: 10px;">
+				<a class="modal-trigger" href="#modal1">
+					<span class="title"><strong>aba</strong> <span class="text-jawa">ꦲꦧ</span></span>
+					<p>
+						kn 1 ak. swara, ujar, 2 prentah, pakon, diabani: diprentahi sarana swara, dikon.<br/>
+						(Poerwadarminta: 1939)
+					</p>
+				</a>
+			</li>
+			<li class="collection-item avatar" style="padding-left: 10px;">
+				<a class="modal-trigger" href="#modal1">
+					<span class="title"><strong>abêt</strong> <span class="text-jawa">ꦲꦧꦼꦠ꧀</span></span>
+					<p>
+						êngg. kn 1 tabêt, tilas, 2 kamanuhan, saradan, [x]-e êngg: ayake, kc. labêt, tabêt.<br/>
+						(Poerwadarminta: 1939)
+					</p>
+				</a>
+			</li>
+		</ul>
+		<div class="center">
+			<h4>Sepurane lur.</h4>
+			Tembung <strong>kanji</strong> durung ana nang sistemku. <br/><br/>
+			<a class="waves-effect waves-light btn deep-purple" href="#modal1">Usul</a>
+		</div>
+	</div>
+</div>
+
+<div id="modal1" class="modal modal-fixed-footer">
+	<div class="modal-content">
+		<h4 class="text-jawa">ꦲꦧ</h4>
+		<h4>aba</h4>
+		<p>kn 1 ak. swara, ujar, 2 prentah, pakon, diabani: diprentahi sarana swara, dikon.</p>
+		<hr/>
+		<strong>Sumber: </strong>Poerwadarminta. 1939. <i>Bausastra Jawa</i>. Jakarta:P
+	</div>
+	<div class="modal-footer">
+		<a href="#!" class="modal-close waves-effect waves-green btn-flat">Tutup</a>
+	</div>
+</div>
+  
+  <footer class="page-footer light-blue darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

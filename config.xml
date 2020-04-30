@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="id.budiarto.bausastra" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Bausastra</name>
+    <description>
+        Media Pembelajaran Peristiwa Sekitar Proklamasi Kemerdekaan Indonesia
+    </description>
+    <author email="arifbudiarto.1212@gmail.com" href="http://laporanku.co.id">
+        Laporanku
+    </author>
+    <content src="index.html" />
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="default" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-installLocation" value="auto" />
+    <plugin name="cordova-plugin-splashscreen" source="npm" />
+    <icon src="img/icon.png" />
+    <splash src="res/screen/android/splash-port-hdpi.png" />
+    <splash platform="android" qualifier="ldpi" src="res/screen/android/splash-port-ldpi.png" />
+    <splash platform="android" qualifier="mdpi" src="res/screen/android/splash-port-mdpi.png" />
+    <splash platform="android" qualifier="hdpi" src="res/screen/android/splash-port-hdpi.png" />
+    <splash platform="android" qualifier="xhdpi" src="res/screen/android/splash-port-xhdpi.png" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="5000" />
+    <access origin="*" />
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+</widget>
